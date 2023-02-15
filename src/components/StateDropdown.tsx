@@ -1,3 +1,5 @@
+import "./StateDropdown.css"
+
 export function StateDropdown() {
-    return <div>Hello</div>
+    return <button className="state-dropdown"> -- Select your states --</button>
 }

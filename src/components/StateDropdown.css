@@ -1,0 +1,10 @@
+.state-dropdown {
+    background: white;
+    height: 35px;
+    width: 200px;
+    display: flex;
+    align-items: center;
+    margin: auto;
+    margin-top: 200px;
+    padding-left: 10px;
+}
