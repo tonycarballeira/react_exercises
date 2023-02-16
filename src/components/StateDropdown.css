@@ -12,14 +12,24 @@
 .panel {
     color: black;
     background: white;
-    display: flex;
     align-items: center;
     margin: auto;
     justify-content: center;
-    width: 200px;
+    width: 350px;
+    height: 250px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    font-size: 12px;
+    overflow-y: auto;
 }
 
 .state-dropdown {
     position: relative;
+    border: none;
+}
+
+.panel fieldset {
+    display: flex;
+    align-items: center;
     border: none;
 }

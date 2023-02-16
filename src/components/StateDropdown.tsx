@@ -1,5 +1,6 @@
 import { useState } from "react";
-import "./StateDropdown.css"
+import "./StateDropdown.css";
+import { states } from "./states"
 
 export function StateDropdown() {
 
@@ -8,12 +9,20 @@ export function StateDropdown() {
 
     return (
         <fieldset className="state-dropdown">
-            <button 
-            onClick={() => setIsDropdownDisplayed(prevState => !prevState)}
-            > 
-            -- Select your states --
+            <button onClick={() => setIsDropdownDisplayed(prevState => !prevState)}> 
+            -- select your states --
             </button>
-            {isDropdownDisplayed && <div className="panel">Hello</div>}
+            
+            {isDropdownDisplayed && (
+                <div className="panel">
+                    {states.map((state) => (
+                        <fieldset>
+                            <input id={state.abbreviation} type="checkbox" />
+                            <label htmlFor={state.abbreviation}>{state.name}</label>
+                        </fieldset>
+                    ))}
+                </div>
+            )}
         </fieldset>
     )
 }
