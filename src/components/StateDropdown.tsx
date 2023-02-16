@@ -7,9 +7,13 @@ export function StateDropdown() {
 
 
     return (
-        <>
-            <button className="state-dropdown"> -- Select your states --</button>
+        <fieldset className="state-dropdown">
+            <button 
+            onClick={() => setIsDropdownDisplayed(prevState => !prevState)}
+            > 
+            -- Select your states --
+            </button>
             {isDropdownDisplayed && <div className="panel">Hello</div>}
-        </>
+        </fieldset>
     )
 }
